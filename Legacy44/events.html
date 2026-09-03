@@ -43,17 +43,30 @@
           New events are posted regularly — check back often.
         </p>
 
-        <!-- Filter tabs: pure client-side, filters the list below -->
-        <div class="filter-tabs" role="group" aria-label="Filter events">
-          <button data-filter="upcoming" aria-pressed="true">Upcoming</button>
-          <button data-filter="past" aria-pressed="false">Past</button>
-          <button data-filter="all" aria-pressed="false">All</button>
+        <!--
+          GOOGLE CALENDAR EMBED
+          To connect this to the real calendar:
+          1. In Google Calendar, go to Settings > Settings for my calendars > [this calendar]
+          2. Under "Integrate calendar," copy the src value from the embed code
+          3. Paste it into the iframe src below (replace the placeholder ID) —
+             update the same value in index.html's preview embed too
+          4. Set the calendar's sharing to "See all event details" so it's public
+        -->
+        <div class="calendar-embed">
+          <iframe
+            src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID%40group.calendar.google.com&ctz=America%2FNew_York&mode=AGENDA"
+            style="border: 0"
+            width="100%"
+            height="600"
+            frameborder="0"
+            scrolling="no"
+            title="Legacy 44 events calendar">
+          </iframe>
         </div>
 
-        <!-- Populated by js/events.js from data/events.json -->
-        <div id="events-list" class="grid">
-          <p class="event-empty">Loading events…</p>
-        </div>
+        <p class="form-note" style="margin-top: var(--space-2);">
+          Prefer your own calendar app? <a href="#">Subscribe to this calendar</a> to get every new event automatically.
+        </p>
       </div>
     </section>
 
@@ -92,8 +105,8 @@
         <div>
           <h4>Contact</h4>
           <ul>
-            <li><a href="mailto:info@yourorg.org">info@yourorg.org</a></li>
-            <li><a href="tel:+13365550123">(919) 824-8571</a></li>
+            <li><a href="mailto:legacy44yaw@gmail.com">legacy44yaw@gmail.com</a></li>
+            <li><a href="tel:+19198248571">(919) 824-8571</a></li>
             <li>Greensboro, NC</li>
           </ul>
         </div>
@@ -106,6 +119,5 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/events.js"></script>
 </body>
 </html>

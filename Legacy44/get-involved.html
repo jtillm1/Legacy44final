@@ -65,7 +65,12 @@
 
     <div class="threshold"><span></span></div>
 
-    <!-- VOLUNTEER FORM -->
+    <!--
+      VOLUNTEER FORM — wired to Netlify Forms.
+      data-netlify="true" + the hidden form-name field is how Netlify detects
+      this form during deploy and creates a submissions inbox for it — no
+      backend code or database needed. js/forms.js handles the AJAX submit.
+    -->
     <section class="section" id="volunteer">
       <div class="wrap">
         <p class="eyebrow">Volunteer</p>
@@ -75,7 +80,12 @@
           dates and current volunteer needs.
         </p>
 
-        <form class="form" data-demo-form novalidate>
+        <form class="form" name="volunteer" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="volunteer" />
+          <p class="visually-hidden">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+
           <div class="form-fields" style="display:flex; flex-direction:column; gap:var(--space-2);">
             <div class="form-row">
               <label for="v-name">Full name</label>
@@ -111,6 +121,9 @@
 
         <div class="form-success">
           <strong>Thank you!</strong> We've received your interest and will be in touch soon about next steps.
+        </div>
+        <div class="form-error">
+          <strong>Something went wrong.</strong> Please try again, or email us directly at info@yourorg.org.
         </div>
       </div>
     </section>
@@ -157,8 +170,8 @@
         <div>
           <h4>Contact</h4>
           <ul>
-            <li><a href="mailto:info@yourorg.org">info@yourorg.org</a></li>
-            <li><a href="tel:+13365550123">(919) 824-8571</a></li>
+            <li><a href="mailto:legacy44yaw@gmail.com">legacy44yaw@gmail.com</a></li>
+            <li><a href="tel:+19198248571">(919) 824-8571</a></li>
             <li>Greensboro, NC</li>
           </ul>
         </div>
