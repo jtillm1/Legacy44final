@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Events — Legacy 44</title>
+  <meta name="description" content="Upcoming events, volunteer orientations, and fundraisers from Legacy 44." />
+
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo-transparent.png" alt="Legacy 44 logo" class="nav-logo">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html" aria-current="page">Events</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="get-involved.html#donate" class="nav-cta">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="section" style="padding-top: var(--space-5); padding-bottom: var(--space-3);">
+      <div class="wrap">
+        <p class="eyebrow">What's coming up</p>
+        <h1 style="max-width: 20ch;">Events &amp; ways to show up.</h1>
+        <p class="hero-lede" style="font-size:1.05rem;">
+          Volunteer orientations, fundraisers, and community open houses.
+          New events are posted regularly — check back often.
+        </p>
+
+        <!-- Filter tabs: pure client-side, filters the list below -->
+        <div class="filter-tabs" role="group" aria-label="Filter events">
+          <button data-filter="upcoming" aria-pressed="true">Upcoming</button>
+          <button data-filter="past" aria-pressed="false">Past</button>
+          <button data-filter="all" aria-pressed="false">All</button>
+        </div>
+
+        <!-- Populated by js/events.js from data/events.json -->
+        <div id="events-list" class="grid">
+          <p class="event-empty">Loading events…</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="threshold"><span></span></div>
+
+    <section class="section">
+      <div class="wrap" style="text-align:center;">
+        <p class="eyebrow">Don't see a date that works?</p>
+        <h2 style="max-width: 24ch; margin: 0 auto var(--space-2);">We also welcome walk-in visitors during office hours.</h2>
+        <p style="max-width: 46ch; margin: 0 auto var(--space-3);">
+          Monday–Friday, 9am–4pm at our Main House. Or reach out below to
+          schedule a time that works for you.
+        </p>
+        <a href="contact.html" class="btn btn-primary">Contact us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><img src="images/icon-mark.png" alt="" class="footer-mark"><span>Legacy 44</span></div>
+          <p style="color:#C7CDD6; max-width: 32ch;">Transitional housing and reentry support, built by and for the local community.</p>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@yourorg.org">info@yourorg.org</a></li>
+            <li><a href="tel:+13365550123">(919) 824-8571</a></li>
+            <li>Greensboro, NC</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Legacy 44. All rights reserved.</span>
+        <span>501(c)(3) nonprofit organization</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/events.js"></script>
+</body>
+</html>

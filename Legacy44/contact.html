@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact — Legacy 44</title>
+  <meta name="description" content="Get in touch with Legacy 44 — office hours, phone, email, and a contact form." />
+
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-brand">
+        <img src="images/logo-transparent.png" alt="Legacy 44 logo" class="nav-logo">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a href="get-involved.html#donate" class="nav-cta">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top: var(--space-5);">
+      <div class="wrap hero-grid" style="align-items:flex-start;">
+
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h1 style="max-width: 16ch;">Let's talk.</h1>
+          <p class="hero-lede" style="font-size:1.05rem; margin-bottom: var(--space-4);">
+            Questions about volunteering, referrals, partnerships, or the
+            program in general — reach out any time.
+          </p>
+
+          <form class="form" data-demo-form novalidate>
+            <div class="form-fields" style="display:flex; flex-direction:column; gap:var(--space-2);">
+              <div class="form-row">
+                <label for="c-name">Full name</label>
+                <input id="c-name" name="name" type="text" required />
+              </div>
+              <div class="form-row">
+                <label for="c-email">Email</label>
+                <input id="c-email" name="email" type="email" required />
+              </div>
+              <div class="form-row">
+                <label for="c-subject">Subject</label>
+                <select id="c-subject" name="subject">
+                  <option>General question</option>
+                  <option>Volunteering</option>
+                  <option>Referral for housing</option>
+                  <option>Partnership / employer</option>
+                  <option>Media inquiry</option>
+                </select>
+              </div>
+              <div class="form-row">
+                <label for="c-message">Message</label>
+                <textarea id="c-message" name="message" required></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send message</button>
+            <p class="form-note">We typically respond within 2 business days.</p>
+          </form>
+
+          <div class="form-success">
+            <strong>Message sent.</strong> Thanks for reaching out — we'll get back to you soon.
+          </div>
+        </div>
+
+        <div>
+          <div class="card" style="margin-bottom: var(--space-2);">
+            <p class="eyebrow">Office</p>
+            <h3>Main House</h3>
+            <p>214 Willow St<br/>Greensboro, NC 27401</p>
+          </div>
+          <div class="card" style="margin-bottom: var(--space-2);">
+            <p class="eyebrow">Reach us directly</p>
+            <p><a href="mailto:info@yourorg.org">info@yourorg.org</a><br/>
+               <a href="tel:+13365550123">(919) 824-8571</a></p>
+          </div>
+          <div class="card">
+            <p class="eyebrow">Office hours</p>
+            <p>Monday–Friday, 9:00 AM – 4:00 PM<br/>Walk-ins welcome.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand"><img src="images/icon-mark.png" alt="" class="footer-mark"><span>Legacy 44</span></div>
+          <p style="color:#C7CDD6; max-width: 32ch;">Transitional housing and reentry support, built by and for the local community.</p>
+        </div>
+        <div>
+          <h4>Site</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:legacy44yaw@gmail.com">legacy44yaw@gmail.com</a></li>
+            <li><a href="tel:+19198248571">(919) 824-8571</a></li>
+            <li>Greensboro, NC</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Legacy 44. All rights reserved.</span>
+        <span>501(c)(3) nonprofit organization</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
